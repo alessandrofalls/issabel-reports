@@ -1,0 +1,2 @@
+﻿Import-Module ActiveDirectory
+Get-ADUser -properties company,department,Title -filter 'Company -like "*Sicredi União PR/SP*" -and Enabled -eq $True' | Select-object Name,Department,Title | Export-Csv lista.csv -Encoding UTF8

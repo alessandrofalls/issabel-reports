@@ -1,0 +1,2 @@
+﻿Import-Module ActiveDirectory
+Get-ADUser -properties msRTCSIP-Line,company,department,Title -filter 'Company -like "*Sicredi União PR/SP*" -and Enabled -eq $True' | Select-object Name,Department,msRTCSIP-Line,Title | Export-Csv lista.csv -Encoding UTF8
